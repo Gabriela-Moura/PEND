@@ -22,4 +22,15 @@ saudacaoNome("Ana");
 function imc(peso, h) {
     return peso/(h**2);
 }
-imc(65, 1.65);
+console.log("O IMC é: ", imc(65, 1.65));
+
+//Exercício 8
+function par(n) {
+    return n/2;
+}
+par(4);
+if (function par(n) == 0) {
+    console.log("O número ", n, "é par");
+}else {
+    console.log("O número ", n, "é ímpar");
+}
