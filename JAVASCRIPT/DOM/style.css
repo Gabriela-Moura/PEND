@@ -1,0 +1,16 @@
+.botao {
+    background-color: #19B5FF;
+    border-radius: 25px;
+    border: 5px solid #1A4052;
+    color:white;
+    cursor: pointer;
+    font-size: 15px;
+}
+.destaque{
+    font-weight: bold;
+    color: red;
+}
+img{
+    height: 300px;
+    width: 500px;
+}
