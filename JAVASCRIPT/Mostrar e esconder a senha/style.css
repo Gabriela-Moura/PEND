@@ -1,0 +1,16 @@
+*{
+    background-color: yellow;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+input{
+    border: solid white;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+}
