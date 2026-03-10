@@ -1,9 +1,3 @@
-/* #botao1,.texto {
-    color: blue;
+.esconder{
+    display: none;
 }
-#botao2, .texto {
-    color: red;
-}
-.texto {
-    color: black
-} */

@@ -28,3 +28,9 @@ document.getElementById("lista").appendChild(novoItem);
 //element.removeChild(child)
 let item = document.getElementById("item1");
 document.getElementById("list").removeChild(item);
+
+let botao = document.querySelector("#botao");
+let texto = document.querySelector(".texto");
+botao.addEventListener("click", function() {
+    texto.textContent = "Texto alterado após o clique!";
+});

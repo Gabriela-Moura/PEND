@@ -9,6 +9,7 @@
 .destaque{
     font-weight: bold;
     color: red;
+    background-color: yellow;
 }
 img{
     height: 300px;
