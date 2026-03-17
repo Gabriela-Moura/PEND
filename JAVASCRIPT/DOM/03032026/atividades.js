@@ -1,13 +1,13 @@
 //Atividade 1
-let botao1 = document.querySelector("#botao1");
-let botao2 = document.querySelector("#botao2");
+let botao_azul = document.querySelector("#botao_azul");
+let botao_red = document.querySelector("#botao_red");
 let texto = document.querySelector(".texto");
 
-botao1.addEventListener("click", function () {
+botao_azul.addEventListener("click", function () {
     texto.style.color = "blue";
 });
 
-botao2.addEventListener("click", function () {
+botao_red.addEventListener("click", function () {
     texto.style.color = "red";
 });
 
@@ -42,24 +42,24 @@ clique.addEventListener("click", function () {
 });
 
 //Atividade 5
-let click = document.querySelector("#clique5");
+let click = document.querySelector("#clique_criar");
 let lista = document.querySelector("#lista");
-let texto5 = document.querySelector("#texto5");
+let texto_criar = document.querySelector("#texto_criar");
 
 click.addEventListener("click", function () {
     let item = document.createElement("li");
-    item.textContent = texto5.value;
+    item.textContent = texto_criar.value;
     lista.appendChild(item);
 })
 
 //Atividade 6
-let clique6 = document.querySelector("#clique6");
+let clique_remover = document.querySelector("#clique_remover");
 let list = document.querySelector("#list");
-let texto6 = document.querySelector("#texto6");
+let texto_remover = document.querySelector("#texto_remover");
 
-clique6.addEventListener("click", function () {
+clique_remover.addEventListener("click", function () {
     let elemento = document.createElement("li");
-    elemento.textContent = texto6.value;
+    elemento.textContent = texto_remover.value;
     list.appendChild(elemento);
 
     elemento.addEventListener("click", function () {
@@ -88,13 +88,16 @@ clique_extra.addEventListener("click", function () {
 });
 
 //Desafio Hard
-// let texto_hard = document.querySelector("#texto_hard");
+let texto_hard = document.querySelector("#texto_hard");
+let p_hard = document.querySelector(".p_hard");
+let button_hard = document.querySelector(".button_hard");
 
-
-// if (texto_hard == "") {
-//     alert("O campo Nome é obrigatório!")
-//     .style.color = 
-//     // document.getElementById("p_hard").innerHTML = "<p>O campo Nome é obrigatório</p>";
-// }else {
-//     alert("Nome enviado com sucesso!")
-// }
+button_hard.addEventListener("click", function () {
+    if (texto_hard.value == "") {
+        p_hard.innerHTML = "<p>O campo nome é obrigatório!</p>";
+        p_hard.style.color= "red"
+    }else {
+        p_hard.innerHTML = "<p>Nome enviado com sucesso!</p>";
+        p_hard.style.color= "green"
+    }
+});
