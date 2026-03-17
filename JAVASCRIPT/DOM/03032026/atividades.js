@@ -42,11 +42,11 @@ clique.addEventListener("click", function () {
 });
 
 //Atividade 5
-let click = document.querySelector("#clique_criar");
+let clique_criar = document.querySelector("#clique_criar");
 let lista = document.querySelector("#lista");
 let texto_criar = document.querySelector("#texto_criar");
 
-click.addEventListener("click", function () {
+clique_criar.addEventListener("click", function () {
     let item = document.createElement("li");
     item.textContent = texto_criar.value;
     lista.appendChild(item);
@@ -93,7 +93,7 @@ let p_hard = document.querySelector(".p_hard");
 let button_hard = document.querySelector(".button_hard");
 
 button_hard.addEventListener("click", function () {
-    if (texto_hard.value === "") {
+    if (texto_hard.value.trim() === "") {
         p_hard.innerHTML = "<p>O campo nome é obrigatório!</p>";
         p_hard.style.color= "red"
     }else {
