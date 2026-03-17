@@ -93,7 +93,7 @@ let p_hard = document.querySelector(".p_hard");
 let button_hard = document.querySelector(".button_hard");
 
 button_hard.addEventListener("click", function () {
-    if (texto_hard.value == "") {
+    if (texto_hard.value === "") {
         p_hard.innerHTML = "<p>O campo nome é obrigatório!</p>";
         p_hard.style.color= "red"
     }else {
