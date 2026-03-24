@@ -117,12 +117,26 @@ validar.addEventListener("click", function() {
         validarEmail.innerHTML = "<p>E-mail inválido!</p>";
         validarEmail.style.color= "red"
     }
+
     if (email.value === "") {
         validarEmail.innerHTML = "<p>Preencha o campo E-mail!</p>";
     }
     if(senha.value.length === 0) {
         validarSenha.innerHTML = "<p>Preencha o campo senha!</p>";
         validarSenha.style.color= "red"
+    }
+    
+    if(senha.value.length >= 6) {
+        validarSenha.innerHTML = "<p>Senha válida!</p>";
+        validarSenha.style.color= "green"
+    } else {
+        validarSenha.innerHTML = "<p>Senha inválida!</p>";
+        validarSenha.style.color= "red"
+    }
+
+    if(senha.value.length >= 6 && email.value.includes("@") && email.value.includes(".")) {
+        validarEmail.innerHTML = "<p>E-mail e senha válidos!</p>";
+        validarSenha.innerHTML = "";
     }
 });
 
@@ -138,11 +152,5 @@ senha.addEventListener("keyup", function () {
     if(senha.value.length > 10) {
         validarSenha.innerHTML = "<p>Senha forte</p>";
         validarSenha.style.color= "green"
-    }
-});
-validar.addEventListener("click", function() {
-    if(senha.value.length >= 6 && email.value.includes("@") && email.value.includes(".")) {
-        validarEmail.innerHTML = "<p>E-mail e senha válidos!</p>";
-        validarSenha.innerHTML = "";
     }
 });
