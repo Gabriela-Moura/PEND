@@ -1,4 +1,4 @@
-//Exercícios Validação Senha
+//Exercícios Validação Campos
     let email = document.querySelector("#email");
     let senha = document.querySelector("#senha"); 
     let validar = document.querySelector("#validar");
