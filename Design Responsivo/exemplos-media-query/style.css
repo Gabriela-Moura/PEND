@@ -1,0 +1,25 @@
+h1{
+    color:red;
+}
+h2{
+    color: blue;
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width:1023px) {
+    h1{
+        color:blue;
+    }
+    h2{
+        color: yellow;
+    }
+}
+/* Celular */ 
+@media (max-width: 767px) {
+    h1{
+        color:blue;
+    }
+    h2{
+        color: green;
+    }
+}

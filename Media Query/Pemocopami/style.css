@@ -1,0 +1,139 @@
+/* Corpo do site */
+body{
+    background-color: rgb(237, 56, 155);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Cabeçalho */
+header{
+    background-color: rgb(244, 156, 206);
+    border: 2px solid white;
+    padding: 2%;
+}
+
+/* Título */
+h1{
+    color: black;
+    display: flex;
+}
+
+.topo{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+/* Logo */
+.topo img{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    border-radius: 50%;
+}
+
+/* Menu */
+nav{
+    margin-top: 2%;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    margin: 1%;
+    font-size: 100%;
+}
+
+nav a:hover{
+    color: white;
+}
+
+/* Banner */
+.banner{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.banner img{
+    width: 250px;
+    height: 200px;
+}
+
+/* Títulos */
+h2, h3, h4{
+    text-align: center;
+}
+
+/* Caixa de texto */
+.caixa-texto{
+    background-color: rgb(244, 156, 206);
+    border: 2px solid white;
+    padding: 2%;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Produtos */
+.produtos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 2%;
+}
+
+.produtos img{
+    display: flex;
+    width: 250px;
+    height: 350px;
+    border-radius: 10%;
+    transition: 0.3s;
+}
+
+.produtos img:hover{
+    transform: scale(1.05);
+}
+
+/* Listas */
+.lista{
+    background-color: rgb(244, 156, 206);
+    border: 2px solid white;
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+/* Rodapé */
+footer{
+    text-align: center;
+    padding: 2%;
+    margin-top: 30px;
+}
+
+/* Celular */ 
+@media (max-width: 767px) {
+    .caixa-texto, .lista{
+        background-color: white;
+    }
+    body{
+        background-color: rgb(244, 156, 206);
+    }
+    header{
+        background-color: rgb(255, 255, 255);
+    }
+    nav a:hover{
+        color: rgb(237, 56, 155);
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width:1023px) {
+    body{
+        background-color: white;
+    }
+    header{
+        background-color: rgb(237, 56, 155);
+    }
+}
