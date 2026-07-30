@@ -1,0 +1,319 @@
+body{
+    background-color: rgb(239, 179, 244);
+}
+
+header{
+    background-color:rgb(184, 4, 200);
+    display: flex;
+    align-items: center;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 5px;
+    width: 200px;
+    border: 2px solid  #9a9da1;
+}
+
+input:hover{
+    border: 2px solid rgb(184, 4, 200);
+    background-color: rgb(239, 179, 244);
+}
+
+input:active{
+    border: 2px solid rgb(184, 4, 200);
+    background-color: rgb(239, 179, 244);
+}
+
+.erro{
+    color: red;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 1%;
+}
+
+.titulo{
+    font-family: Georgia, serif;
+    color: rgb(255, 253, 255);
+}
+
+.menu{
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
+    padding-right: 2%;
+}
+
+a{
+    font-family: Arial, sans-serif;
+    color: rgb(255, 253, 255);
+    text-decoration: none;
+    padding: 5px;
+}
+
+.link_menu:hover{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(239, 179, 244);
+    color:rgb(171, 0, 134); 
+    padding: 2px;
+    border-radius: 7px;
+}
+
+.link_menu:active{
+    border: 2px solid rgb(133, 3, 145);
+    background-color: rgb(133, 3, 145);
+    color: white;
+}
+
+h2, h3{
+    color: rgb(133, 3, 145);
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+.destaque{
+    display: block;
+    justify-self: center;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    width: 50%;
+    height: auto;
+    margin: 20px;
+}
+.conteudo{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.texto{
+    flex: 1;
+}
+
+.imagem {
+    width: 300px;
+    height: 280px;
+    border-radius: 10%;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(184, 4, 200);
+}
+
+.imagem_bale {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(184, 4, 200);
+}
+
+.imagem_bolo, .imagem_futuro {
+    width: 300px;
+    height: 200px;
+    border-radius: 10%;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(184, 4, 200);
+}
+
+.descricao{
+    font-family: Georgia, serif;
+    display: flex;
+    text-align: justify;
+    padding-right: 20px;
+}
+
+.botao{
+    border-radius: 10px;
+    border: 2px solid  rgb(184, 4, 200);
+    display: flex;
+    justify-self: center;
+    background-color:  rgb(239, 179, 244);
+    font-family: Arial, sans-serif;
+    height: 30px;
+    color:black;
+    align-items: center;
+    font-size: medium;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.botao:hover{
+    display: flex;
+    width: 80px;
+    height: 35px;
+    justify-content:center;
+    background-color: rgb(184, 4, 200);
+    color: white;
+}
+
+.botao:active{
+    display: flex;
+    width: 80px;
+    height: 35px;
+    justify-content:center;
+    background-color: rgb(239, 179, 244);
+    color:rgb(184, 4, 200);
+}
+
+footer{
+    background-color: rgb(184, 4, 200);;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+/* Media query - Tablets */
+@media (min-width: 768px) and (max-width:1023px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .link_menu{
+        display: flex;
+        font-size: x-large;
+        padding-bottom: 5%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .destaque{
+        width: 85%;
+    }
+
+    .imagem {
+        width: 70%;
+        border-radius: 5%;
+        display: flex;
+        justify-self: center;
+    }
+
+    .descricao{
+        font-size: larger;
+    }
+
+    .botao{
+        height: 30px;
+        font-size: 22px;
+    }
+
+    .botao:hover{
+        height: 35px;
+        width: 95px;
+    }
+
+    .botao:active{
+        width: 95px;
+        height: 35px;
+    } 
+
+    h3{
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+/* Media Query - Celular */ 
+@media (max-width: 767px) {
+   header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+
+    .link_menu{
+        display: flex;
+        font-size: x-large;
+        padding-bottom: 5%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .destaque{
+        width: 85%;
+    }
+
+    .imagem {
+        width: 70%;
+        border-radius: 5%;
+        display: flex;
+        justify-self: center;
+    }
+
+    .descricao{
+        font-size: larger;
+    }
+
+    .botao{
+        height: 30px;
+        font-size: 22px;
+    }
+
+    .botao:hover{
+        height: 35px;
+        width: 95px;
+    }
+
+    .botao:active{
+        width: 95px;
+        height: 35px;
+    } 
+
+    footer{
+        font-size: larger;
+    }
+
+    h3{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+    }
+}
