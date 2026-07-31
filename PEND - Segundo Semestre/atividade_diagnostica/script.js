@@ -14,9 +14,6 @@ let email = document.querySelector("#email");
 
 //Variáveis campo telefone
 let telefone = document.querySelector("#telefone");
-let div_telefone = document.querySelector("#div_telefone");
-let add_telefone = document.querySelector("#add_telefone");
-
 
 //Essa variável é um regex que valida se o nome possui números ou caracteres especiais. Permite letras maiúsculas, minúsculas, acentos e espaços.
 let validar_nome = /^[A-Za-zÀ-ÿ\s]+$/;
@@ -24,8 +21,6 @@ let validar_nome = /^[A-Za-zÀ-ÿ\s]+$/;
 let validar_email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 //Essa variável é um regex que valida se o telefone segue o padrão: (00)00000-0000. Permite também que seja (00)0000-0000, para telefones fixos, além de permitir espaços (00) 00000 - 0000. 
 let validar_telefone = /^\([1-9]{2}\)\s?[0-9]{4,5}\s?-\s?[0-9]{4}$/;
-//Essa variável é um regex que valida os telefones que podem ou não serem adicionados pelo usuário. Ela segue o mesmo padrão da variável validar_telefone.
-let validar_novo = /^\([1-9]{2}\)\s?[0-9]{4,5}\s?-\s?[0-9]{4}$/;
 
 //------------------------------------------Campo nome--------------------------------------------
 //Esse bloco de código válida se o usuário colocou algum número ou caracter especial(Ex: @, #, $, %) no campo nome. Essa validação é possível por meio do regex da variável validar_nome. Se o campo nome estiver errado o JS envia a mensagem de erro "Nome inválido! Seu nome não pode conter números ou caracteres especiais".
@@ -106,7 +101,7 @@ botao.addEventListener("click", function() {
 
 
     if (camposValidos) {
-        alert("Formulário enviado com sucesso! Muito obrigada pelo contato. Em breve entrarei em contato com você.");
+        alert("Formulário enviado com sucesso! Em breve entrarei em contato com você.");
     } else {
         alert("Alguns campos não estão preenchidos corretamente. Verifique se os dados seguem o padrão esperado.");
     }

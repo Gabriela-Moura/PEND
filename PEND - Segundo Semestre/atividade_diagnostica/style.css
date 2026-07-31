@@ -1,37 +1,11 @@
 body{
-    background-color: rgb(239, 179, 244);
+    background-color: #dfd9f7;
 }
 
 header{
-    background-color:rgb(184, 4, 200);
+    background-color:#8d4db8;
     display: flex;
     align-items: center;
-}
-
-.formulario{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input {
-    padding: 5px;
-    width: 200px;
-    border: 2px solid  #9a9da1;
-}
-
-input:hover{
-    border: 2px solid rgb(184, 4, 200);
-    background-color: rgb(239, 179, 244);
-}
-
-input:active{
-    border: 2px solid rgb(184, 4, 200);
-    background-color: rgb(239, 179, 244);
-}
-
-.erro{
-    color: red;
 }
 
 .logo{
@@ -65,7 +39,7 @@ a{
     justify-content:center;
     align-items: center;
     background-color: rgb(239, 179, 244);
-    color:rgb(171, 0, 134); 
+    color: #8d4db8; 
     padding: 2px;
     border-radius: 7px;
 }
@@ -77,7 +51,7 @@ a{
 }
 
 h2, h3{
-    color: rgb(133, 3, 145);
+    color: #8d4db8;
     display: flex;
     justify-content: center;
     font-family: Georgia, serif;
@@ -95,59 +69,98 @@ h2, h3{
     height: auto;
     margin: 20px;
 }
-.conteudo{
+
+.interesses{
     display: flex;
-    align-items: flex-start;
-    gap: 40px;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.texto{
-    flex: 1;
+.hobbies{
+    display: block;
+    justify-self: center;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    width: 20%;
+    height: auto;
+    margin: 10px;
+    flex-wrap: wrap;
 }
 
 .imagem {
-    width: 300px;
-    height: 280px;
+    width: 30%;
+    height: auto;
     border-radius: 10%;
     display: flex;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    border: 2px solid rgb(184, 4, 200);
+    border: 2px solid #8d4db8;
+    justify-self: center;
 }
 
-.imagem_bale {
-    width: 250px;
-    height: 250px;
+.imagem_futuro {
+    width: 50%;
+    height: auto;
     border-radius: 10%;
     display: flex;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    border: 2px solid rgb(184, 4, 200);
+    border: 2px solid #8d4db8;
+    justify-self: center;
 }
 
-.imagem_bolo, .imagem_futuro {
-    width: 300px;
-    height: 200px;
-    border-radius: 10%;
+.imagem_hobbies {
+    width: 70%;
+    height: 150px;
+    border-radius: 15%;
     display: flex;
+    justify-self: center;
     margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    border: 2px solid rgb(184, 4, 200);
+    border: 2px solid #8d4db8;
 }
 
 .descricao{
-    font-family: Georgia, serif;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     text-align: justify;
     padding-right: 20px;
 }
 
+.descricao_hobbies{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 5px;
+    width: 200px;
+    border: 2px solid  #000000;
+}
+
+input:hover{
+    border: 2px solid #8d4db8;
+    background-color: rgb(239, 179, 244);
+}
+
+input:active{
+    border: 2px solid #8d4db8;
+    background-color: rgb(239, 179, 244);
+}
+
+.erro{
+    color: red;
+}
+
 .botao{
     border-radius: 10px;
-    border: 2px solid  rgb(184, 4, 200);
+    border: 2px solid #8d4db8;
     display: flex;
     justify-self: center;
     background-color:  rgb(239, 179, 244);
@@ -165,7 +178,7 @@ h2, h3{
     width: 80px;
     height: 35px;
     justify-content:center;
-    background-color: rgb(184, 4, 200);
+    background-color: #8d4db8;
     color: white;
 }
 
@@ -175,11 +188,11 @@ h2, h3{
     height: 35px;
     justify-content:center;
     background-color: rgb(239, 179, 244);
-    color:rgb(184, 4, 200);
+    color:#8d4db8;
 }
 
 footer{
-    background-color: rgb(184, 4, 200);;
+    background-color: #8d4db8;
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -194,6 +207,10 @@ footer{
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .hobbies{
+        width: 30%;
     }
 
     .menu {
@@ -255,6 +272,10 @@ footer{
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .hobbies{
+        width: 30%;
     }
 
     .menu {
