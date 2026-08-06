@@ -26,7 +26,7 @@ class Carro{
 
 //--- Objetos - Atributos ------------------------------------------
 
-//carro1, carro2 são objetos da classe Carro.
+//carro1, carro2 e carro 3 são objetos da classe Carro.
 const carro1 = new Carro("Volkswagen", "Gol", 2020, "Vermelho"); // atributos do objeto carro1
 console.log(carro1);
 

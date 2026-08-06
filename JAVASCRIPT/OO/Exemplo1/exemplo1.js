@@ -15,9 +15,9 @@ class Filme{
         this.idioma_original = idioma_original;
         this.pais_origem = pais_origem;
         this.distribuidora = distribuidora;
-    //this -> esse objeto. Ele serve para dizer que aquele atributo pertence a esse objeto, guarda os dados no objeto 
-    }  
+    } 
 
+    //Métodos - ações
     exibir_filme() {
         console.log((`${this.nome}: exibindo informações do filme.`));
     }
