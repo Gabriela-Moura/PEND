@@ -39,10 +39,10 @@ class Cadastros {
                 resultado.innerHTML += `
                 <div>
                     <p>---------------------------------</p>
-                    <p>Nome: ${this.nome}</p>
-                    <p>Preço: ${this.preco}</p>
-                    <p>Categoria: ${this.categoria}</p>
-                    <p>Desconto: ${this.desconto}%</p>
+                    <p>Nome: ${produto.nome}</p>
+                    <p>Preço: ${produto.preco}</p>
+                    <p>Categoria: ${produto.categoria}</p>
+                    <p>Desconto: ${produto.desconto}%</p>
                     <p>---------------------------------</p>
                 </div>
                 `;
@@ -55,12 +55,13 @@ const cadastros = new Cadastros();
 botaoCadastrar.addEventListener('click', function() {
 
     const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value);
-    console.log("----------------------------------------------------");
+    console.log(produto)
+    console.log("------------------------------------------------");
     console.log(`Produto: ${produto.nome} `);
     console.log("- ", produto.preco);
     console.log("- ", produto.categoria);
     console.log("- ", produto.desconto, "%");
-    console.log("----------------------------------------------------");
+    console.log("------------------------------------------------");
 
     produto.aplicarDesconto()
     cadastros.adicionarProduto(produto);

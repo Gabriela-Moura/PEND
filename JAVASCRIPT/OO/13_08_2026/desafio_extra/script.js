@@ -24,68 +24,69 @@ class Produto {
 //Class Cadastros ----------------------------------------------------------------------------------------------------------------------
 class Cadastros {
     constructor() {
+       //produtos é uma lista (array) que armazena os produtos cadastrados.
         this.produtos = [];
     }
     adicionarProduto(produto) {
+        //push() adiciona um novo produto ao final dessa lista.
         this.produtos.push(produto);
     }
 
     exibir(){
         const resultado = document.querySelector('#resultado');
-        const excluir = document.querySelector('#excluir');
 
         resultado.innerHTML = "";
 
-            this.produtos.forEach((produto) => {
+            this.produtos.forEach((produto, indice) => {
+            //indice - representa a posição desse produto na lista.
                 resultado.innerHTML += `
                 <div>
                     <p>---------------------------------</p>
-                    <p>Nome: ${this.nome}</p>
-                    <p>Preço: ${this.preco}</p>
-                    <p>Categoria: ${this.categoria}</p>
-                    <p>Desconto: ${this.desconto}%</p>
-                    <button id="excluir">Excluir</button>
+                    <p>Nome: ${produto.nome}</p>
+                    <p>Preço: ${produto.preco}</p>
+                    <p>Categoria: ${produto.categoria}</p>
+                    <p>Desconto: ${produto.desconto}%</p>
+                    <button onclick="cadastros.removerProduto(${indice})">Excluir</button>
                     <p>---------------------------------</p>
                 </div>
                 `;
             })
     }
+    removerProduto(indice) {
+        this.produtos.splice(indice, 1);
+
+        //limpa o console
+        console.clear();
+
+        this.produtos.forEach((produto) => {
+            console.log("----------------------------------------------------");
+            console.log(`Produto: ${produto.nome} `);
+            console.log("- ", produto.preco);
+            console.log("- ", produto.categoria);
+            console.log("- ", produto.desconto, "%");
+            console.log("----------------------------------------------------");
+        });
+
+        this.exibir();
+    }
+    
 }
-const excluir = document.querySelector('#excluir');
+
 const cadastros = new Cadastros();
-
-let excluir = document.createElement("button");
-    excluir.textContent ="Excluir";
-    excluir.style.marginLeft = "5px";
-
-//Botão excluir ---------------------------------------------------------------------------------------------
-excluir.addEventListener('click', function() {
-
-    const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value);
-    console.log("----------------------------------------------------");
-    console.log(`Produto: ${produto.nome} `);
-    console.log("- ", produto.preco);
-    console.log("- ", produto.categoria);
-    console.log("- ", produto.desconto, "%");
-    console.log("----------------------------------------------------");
-
-    produto.aplicarDesconto()
-    cadastros.adicionarProduto(produto);
-    cadastros.exibir();
-});
 
 //Botão cadastrar e exibir na tela ---------------------------------------------------------------------------------------------
 botaoCadastrar.addEventListener('click', function() {
 
     const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value);
-    console.log("----------------------------------------------------");
+    console.log("------------------------------------------------");
     console.log(`Produto: ${produto.nome} `);
     console.log("- ", produto.preco);
     console.log("- ", produto.categoria);
     console.log("- ", produto.desconto, "%");
-    console.log("----------------------------------------------------");
+    console.log("------------------------------------------------");
 
     produto.aplicarDesconto()
     cadastros.adicionarProduto(produto);
     cadastros.exibir();
+    
 });
