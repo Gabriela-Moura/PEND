@@ -63,12 +63,12 @@ class Cadastros {
         console.clear();
 
         this.produtos.forEach((produto) => {
-            console.log("----------------------------------------------------");
+            console.log("------------------------------------------------");
             console.log(`Produto: ${produto.nome} `);
             console.log("- ", produto.preco);
             console.log("- ", produto.categoria);
             console.log("- ", produto.desconto, "%");
-            console.log("----------------------------------------------------");
+            console.log("-----------------------------------------------");
         });
 
         this.exibir();

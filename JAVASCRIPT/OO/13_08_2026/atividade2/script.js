@@ -27,6 +27,7 @@ class Cadastros {
         this.produtos = [];
     }
     adicionarProduto(produto) {
+        // O push é um método do JavaScript que serve para adicionar um elemento no final de um array.
         this.produtos.push(produto);
     }
 
@@ -34,8 +35,11 @@ class Cadastros {
         const resultado = document.querySelector('#resultado');
 
         resultado.innerHTML = "";
-
+        //apaga tudo que estava dentro de resultado
+        
+            //percorre cada elemento do array
             this.produtos.forEach((produto) => {
+                //Não apaga o produto anterior, coloca os produtos um embaixo do outro.
                 resultado.innerHTML += `
                 <div>
                     <p>---------------------------------</p>
