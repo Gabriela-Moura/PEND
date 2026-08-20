@@ -52,7 +52,11 @@ class Cadastros {
                 `;
             })
     }
+
+    //removerProduto recebe o parâmetro indice, pois remove o produto do índice
     removerProduto(indice) {
+        //o indice indica qual produto será removido
+        //o primeiro número (indice) diz a partir de qual posição começar(Ex: Banana, Uva, Maça - Uva é índice 1). O segundo número (1) diz quantos elementos remover (Começa no índice 1 e remove 1 elemento do array).
         this.produtos.splice(indice, 1);
 
         //limpa o console
@@ -88,5 +92,4 @@ botaoCadastrar.addEventListener('click', function() {
     produto.aplicarDesconto()
     cadastros.adicionarProduto(produto);
     cadastros.exibir();
-    
 });

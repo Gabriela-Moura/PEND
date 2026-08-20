@@ -16,7 +16,7 @@ class Produto {
     exibir() {
         const resultado = document.querySelector('#resultado');
 
-        resultado.innerHTML += `
+        resultado.innerHTML = `
             <div>
                 <p>---------------------------------</p>
                 <p>Nome: ${this.nome}</p>
@@ -39,12 +39,12 @@ const botaoCadastrar = document.querySelector('#botaoCadastrar');
 botaoCadastrar.addEventListener('click', function () {
 
     const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value);
-    console.log("----------------------------------------------------");
+    console.log("----------------------------------------------");
     console.log(`Produto: ${produto.nome} `);
     console.log("- ", produto.preco);
     console.log("- ", produto.categoria);
     console.log("- ", produto.desconto, "%");
-    console.log("----------------------------------------------------");
+    console.log("----------------------------------------------");
 
     produto.aplicarDesconto();
     produto.exibir();
