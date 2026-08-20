@@ -84,7 +84,7 @@ class Cadastros {
 
     recuperarProduto () {
         const produtoRecuperado = localStorage.getItem("produto");
-        resultado.textContent = `Produto: ${produtoRecuperado}`;
+        resultado.innerHTML = `Produto: ${produtoRecuperado}`;
     }
     
 }
@@ -95,6 +95,7 @@ const cadastros = new Cadastros();
 botaoCadastrar.addEventListener('click', function() {
 
     const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value);
+    localStorage.setItem("produto", JSON.stringify(produto));
     console.log("------------------------------------------------");
     console.log(`Produto: ${produto.nome} `);
     console.log("- ", produto.preco);
@@ -109,6 +110,21 @@ botaoCadastrar.addEventListener('click', function() {
 });
 
 // ---------------------------------------------------------------------------------------------------------------------------
+const dados = localStorage.getItem("produto");
+
+if (dados) {
+
+    const produtoSalvo = JSON.parse(dados);
+
+    const produto = new Produto(
+        produtoSalvo.nome,
+        produtoSalvo.preco,
+        produtoSalvo.categoria,
+        produtoSalvo.desconto,
+    );
+
+    cadastros.exibir();
+}
 
 //Botão cadastrar e exibir na tela ---------------------------------------------------------------------------------------------
 botaoRecuperar.addEventListener('click', function() {
