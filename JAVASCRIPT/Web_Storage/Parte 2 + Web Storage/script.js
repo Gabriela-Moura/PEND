@@ -9,7 +9,7 @@ const botaoRecuperar = document.querySelector('#botaoRecuperar');
 class Produto {
 
     constructor(nome, preco, categoria, desconto) {
-    //Atributos
+        //Atributos
         this.nome = nome;
         this.preco = preco;
         this.categoria = categoria;
@@ -25,22 +25,25 @@ class Produto {
 //Class Cadastros ----------------------------------------------------------------------------------------------------------------------
 class Cadastros {
     constructor() {
-       //produtos é uma lista (array) que armazena os produtos cadastrados.
+        //produtos é uma lista (array) que armazena os produtos cadastrados.
         this.produtos = [];
+        this.recuperarProduto();
     }
     adicionarProduto(produto) {
         //push() adiciona um novo produto ao final dessa lista.
         this.produtos.push(produto);
+        //Precisa chamar o método salvarProduto para atualizar o Web Storage e adicionar o produto lá
+        this.salvarProduto();
     }
 
-    exibir(){
+    exibir() {
         const resultado = document.querySelector('#resultado');
 
         resultado.innerHTML = "";
 
-            this.produtos.forEach((produto, indice) => {
+        this.produtos.forEach((produto, indice) => {
             //indice - representa a posição desse produto na lista.
-                resultado.innerHTML += `
+            resultado.innerHTML += `
                 <div>
                     <p>---------------------------------</p>
                     <p>Nome: ${produto.nome}</p>
@@ -51,7 +54,7 @@ class Cadastros {
                     <p>---------------------------------</p>
                 </div>
                 `;
-            })
+        })
     }
 
     //removerProduto recebe o parâmetro indice, pois remove o produto do índice
@@ -71,31 +74,34 @@ class Cadastros {
             console.log("- ", produto.desconto, "%");
             console.log("-----------------------------------------------");
         });
-
+        //Precisa chamar o método salvarProduto para atualizar o Web Storage e excluir lá também
+        this.salvarProduto();
         this.exibir();
     }
 
-    salvarProduto () {
-        localStorage.setItem("nome", nome.value);
-        localStorage.setItem("preco", preco.value);
-        localStorage.setItem("categoria", categoria.value);
-        localStorage.setItem("desconto", desconto.value);
+    salvarProduto() {
+        //Transforma objeto em string
+        localStorage.setItem("produtos", JSON.stringify(this.produtos));
     }
 
-    recuperarProduto () {
-        const produtoRecuperado = localStorage.getItem("produto");
-        resultado.innerHTML = `Produto: ${produtoRecuperado}`;
+    recuperarProduto() {
+        const dados = localStorage.getItem("produtos");
+
+        if (dados) {
+            //Transforma string em objeto
+            const produtoSalvo = JSON.parse(dados);
+            this.produtos = produtoSalvo;
+        }
     }
-    
+
 }
 
 const cadastros = new Cadastros();
 
 //Botão cadastrar e exibir na tela ---------------------------------------------------------------------------------------------
-botaoCadastrar.addEventListener('click', function() {
+botaoCadastrar.addEventListener('click', function () {
 
     const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value);
-    localStorage.setItem("produto", JSON.stringify(produto));
     console.log("------------------------------------------------");
     console.log(`Produto: ${produto.nome} `);
     console.log("- ", produto.preco);
@@ -109,24 +115,5 @@ botaoCadastrar.addEventListener('click', function() {
     cadastros.salvarProduto();
 });
 
-// ---------------------------------------------------------------------------------------------------------------------------
-const dados = localStorage.getItem("produto");
-
-if (dados) {
-
-    const produtoSalvo = JSON.parse(dados);
-
-    const produto = new Produto(
-        produtoSalvo.nome,
-        produtoSalvo.preco,
-        produtoSalvo.categoria,
-        produtoSalvo.desconto,
-    );
-
-    cadastros.exibir();
-}
-
-//Botão cadastrar e exibir na tela ---------------------------------------------------------------------------------------------
-botaoRecuperar.addEventListener('click', function() {
-    cadastros.recuperarProduto();
-})
+//Exibe os produtos salvos no Local Storage
+cadastros.exibir();
