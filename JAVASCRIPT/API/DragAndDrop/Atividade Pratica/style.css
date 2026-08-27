@@ -1,0 +1,84 @@
+* {
+    background-color: rgb(255, 255, 225);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#dias{
+    display: flex;
+    justify-content:space-between;
+    justify-self: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid black;
+    width: 90%;
+    height: auto;
+    background-color: white;
+}
+
+div, h4{
+    background-color: white;
+}
+
+h1{
+    display:flex;
+    justify-content: center;
+}
+
+input{
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+input:hover{
+    background-color: rgb(255, 255, 162);
+}
+
+button{
+    border-radius: 5px;
+    background-color: rgb(255, 255, 162);
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: white;
+}
+
+button:active{
+    background-color: rgb(255, 255, 225);
+}
+
+p{
+    padding: 5px;
+    width: 100px;
+    height:auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    display: flex;
+}
+
+#feedback{
+    border-radius: 5px;
+    background-color: rgb(129, 250, 129);
+    height: auto;
+    width: 90%;
+    padding: 2px;
+    display: none;
+    text-align: center;
+    justify-self: center;
+}
+
+#postIt{
+    background-color: rgb(255, 255, 225);
+    display: flex;
+    gap: 20px;
+}
+
+#novaTarefa{
+    display: block;
+    justify-self: center;
+    text-align: center;
+    background-color: rgb(255, 255, 225);
+}

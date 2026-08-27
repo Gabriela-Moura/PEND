@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana em Dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Semana em Dia</h1>
+
+    <!-- Cadastro de uma nova tarefa -->
+    <div id="novaTarefa">
+        <label>Cadastre uma tarefa:</label><br><br>
+        <input type="text" id="tarefa" placeholder="Ex: Estudar para a prova"><br><br>
+        <button id="salvarTarefa">Salvar tarefa</button><br>
+    </div>
+
+    <div id="postIt" draggable="true"></div><br>
+
+    <!-- Feedback -->
+    <div id="feedback"></div><br>
+
+    <!-- Dias da semana que receber a tarefa (drop) -->
+    <div id="dias">
+        <div id="segunda">
+            <h4>Segunda</h4>
+        </div>
+        
+        <div id="terca">
+            <h4>Terça</h4>
+        </div>
+
+        <div id="quarta">
+            <h4>Quarta</h4>
+        </div>
+        
+        <div id="quinta">
+            <h4>Quinta</h4>
+        </div>
+        
+        <div id="sexta">
+            <h4>Sexta</h4>
+        </div>
+        
+        <div id="sabado">
+            <h4>Sábado</h4>
+        </div>
+        
+        <div id="domingo">
+            <h4>Domingo</h4>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
