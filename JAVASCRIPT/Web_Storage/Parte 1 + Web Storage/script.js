@@ -39,7 +39,6 @@ const botaoCadastrar = document.querySelector('#botaoCadastrar');
 botaoCadastrar.addEventListener('click', function () {
 
     const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value);
-    localStorage.setItem("produto", JSON.stringify(produto));
     console.log("----------------------------------------------");
     console.log(`Produto: ${produto.nome} `);
     console.log("- ", produto.preco);
@@ -48,6 +47,7 @@ botaoCadastrar.addEventListener('click', function () {
     console.log("----------------------------------------------");
 
     produto.aplicarDesconto();
+    localStorage.setItem("produto", JSON.stringify(produto));
     produto.exibir();
 });
 
