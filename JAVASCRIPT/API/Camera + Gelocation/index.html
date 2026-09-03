@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Essa aplicação é para confirmar a presença dos alunos na escola, é a mesma coisa que um sistema de ponto eletrônico. Ela pede para o aluno aparecer na câmera e  apertar o botão confirmar. O sistema compara a localização do aluno com a localização da escola, se as localizações forem iguais, a presença é confirmada.-->
-    <!-- O sistema está sempre dando presença não confirmada pois nem sempre o sistema é testado do mesmo local, mas se você estiver exatamente na coordenada da escola, a presença será confirmada. -->
+    <!-- Essa aplicação é para confirmar a presença dos alunos na escola, é a mesma coisa que um sistema de ponto eletrônico. O sistema pede para o aluno aparecer na câmera e apertar o botão confirmar. O sistema vê a localização do aluno (latitude, longitude e precisão). Ao clicar em confirmar o sistema confirma a presença do aluno -->
+
     <header>
         <img src="logo.png" id="logo" alt="Logo da Escola">
         <h1 class="titulo">Sistema de Presença Escolar</h1>
@@ -20,9 +20,15 @@
             <p>Para confirmar sua presença, por favor, posicione-se na frente da câmera e clique no botão "Confirmar".</p>
 
             <video id="camera" autoplay></video> 
-            
+
+            <div id="localizacao">
+                <p id="latitude"></p>
+                <p id="longitude"></p>
+                <p id="precisao"></p>
+            </div>
+
             <!-- Feedback sobre a confirmação da presença-->
-            <p id="informacao"></p><br>
+            <p id="feedback"></p><br>
 
             <button id="confirmar">Confirmar</button>
 

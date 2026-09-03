@@ -1,15 +1,15 @@
-let informacao = document.querySelector("#informacao");
+let feedback = document.querySelector("#feedback");
 let confirmar = document.querySelector("#confirmar");
-let latitude;
-let longitude;
+let latitude = document.querySelector("#latitude");
+let longitude = document.querySelector("#longitude");
+let precisao = document.querySelector("#precisao");
 
 //objeto.API.metodo
 navigator.geolocation.getCurrentPosition(
     function (posicao) {
-        //objeto posição possui tudo que precisamos para obter a localização do usuário
-        //coords -> mostra as coordenadas do usuário
-        latitude = posicao.coords.latitude;
-        longitude = posicao.coords.longitude;
+        latitude.innerHTML = "Latitude: " + posicao.coords.latitude;
+        longitude.innerHTML = "Longitude: " + posicao.coords.longitude;
+        precisao.innerHTML = "Precisão: " + posicao.coords.accuracy;
 
         console.log("Latitude:", posicao.coords.latitude);
         console.log("Longitude:", posicao.coords.longitude);
@@ -34,14 +34,7 @@ navigator.mediaDevices.getUserMedia({
     console.error("Erro ao acessar a câmera:", error);
 });
 
-//Evento de click, verifica se a posição do usuário é a mesma que a da escola, se for, a presença é confirmada, se não, a presença não é confirmada.
+//Evento de click, ao clicar no botão de confirmar, exibe um alerta de presença confirmada
 confirmar.addEventListener("click", function() {
-    // Compara a latitude e longitude com as coordenadas da escola (exemplo: latitude: -21.483954479386355, longitude: -47.00791631969536)
-    if (latitude === -21.483954479386355 && longitude === -47.00791631969536) {
-        informacao.innerHTML = "Presença realizada com sucesso! Sua localização foi confirmada.";
-        informacao.style.backgroundColor = "green"; 
-    }else {
-        informacao.innerHTML = "Presença não realizada! Sua localização está errada.";
-        informacao.style.backgroundColor = "red";
-    }
+    alert("Presença confirmada com sucesso!");
 });
