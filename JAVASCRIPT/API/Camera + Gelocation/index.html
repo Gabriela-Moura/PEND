@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camera + Geolocation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
+        <img src="logo.png" id="logo" alt="Logo da Escola">
         <h1 class="titulo">Sistema de Presença Escolar</h1>
     </header>
 
-    <h2>Confirme sua presença</h2>
-    <p>Para confirmar sua presença, por favor, posicione-se na frente da câmera e clique no botão "Confirmar".</p>
+    </main>
+        <div id="conteudo">
+            <h2>Confirme sua presença</h2>
+            <p>Para confirmar sua presença, por favor, posicione-se na frente da câmera e clique no botão "Confirmar".</p>
 
-    <video id="camera" autoplay></video> 
+            <video id="camera" autoplay></video> 
+            
+            <!-- Feedback sobre a confirmação da presença-->
+            <p id="informacao"></p><br>
 
-    <button id="confirmar">Confirmar</button>
+            <button id="confirmar">Confirmar</button>
 
-    <script src="script.js"></script>
+            <script src="script.js"></script>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Sistema de Presença Escolar. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
