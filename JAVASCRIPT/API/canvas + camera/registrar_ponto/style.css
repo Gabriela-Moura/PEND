@@ -1,0 +1,101 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(222, 220, 220);
+    margin: 0;
+    padding: 0;
+}
+
+#logo{
+    width: 200px;
+    height: auto;
+}
+
+header{
+    background-color: rgb(244, 2, 2);
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+h2{
+    color: white;
+}
+
+#conteudo{
+    display: block;
+    background-color: rgba(244, 2, 2, 0.549);
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 0, 0);
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+}
+
+#confirmar{
+    background-color: rgb(244, 2, 2);
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+#confirmar:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(244, 2, 2);
+}
+
+#confirmar:active{
+    background-color: rgb(244, 2, 2);
+    color: white;
+}
+
+video{
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: rgb(244, 2, 2);
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+#informacao{
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+#localizacao{
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#latitude, #longitude, #precisao{
+    display: flex;
+    background-color: rgb(222, 220, 220);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    justify-content: center;
+}
+
+#canvas{
+    display: none;
+    width: 200px;
+}
