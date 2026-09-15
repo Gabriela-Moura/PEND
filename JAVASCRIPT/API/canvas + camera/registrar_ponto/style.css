@@ -68,6 +68,12 @@ video{
     justify-self: center;
 }
 
+img{
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
 footer{
     background-color: rgb(244, 2, 2);
     padding: 10px;
