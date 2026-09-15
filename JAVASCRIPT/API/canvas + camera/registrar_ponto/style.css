@@ -28,11 +28,13 @@ h2{
     display: block;
     background-color: rgba(244, 2, 2, 0.549);
     padding: 20px;
-    margin:30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 30px;
     border: 2px solid rgb(0, 0, 0);
-    width: 50%;
-    justify-items: center;
+    align-items: center;
+    text-align: center;
+    justify-self: center;
 }
 
 #confirmar{
@@ -46,8 +48,6 @@ h2{
     cursor: pointer;
     text-decoration: none;
     margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
 }
 
 #confirmar:hover{
@@ -64,12 +64,10 @@ video{
     width: 700px;
     height: auto;
     border-radius: 10px;
-    display: flex;
-    justify-self: center;
 }
 
 img{
-    width: 500px;
+    width: 700px;
     height: auto;
     border-radius: 10px;
 }
@@ -101,7 +99,6 @@ footer{
     border-radius: 10px;
     border: 2px solid rgb(0, 0, 0);
     justify-content: center;
-    text-align: center;
 }
 
 #canvas{
