@@ -1,8 +1,10 @@
+let confirmar = document.querySelector("#confirmar");
 let latitude = document.querySelector("#latitude");
 let longitude = document.querySelector("#longitude");
 let precisao = document.querySelector("#precisao");
 let video = document.querySelector('#camera');
 let canvas = document.querySelector("#canvas");
+let foto = document.querySelector("#foto");
 
 //objeto.API.metodo
 navigator.geolocation.getCurrentPosition(
@@ -33,9 +35,7 @@ navigator.mediaDevices.getUserMedia({
     console.error("Erro ao acessar a câmera:", error);
 });
 
-//Evento de click, ao clicar no botão de confirmar, exibe uma mensagem de confirmação de presença em outra página
-let confirmar = document.querySelector("#confirmar")
-
+//Evento de click, ao clicar no botão de confirmar, exibe um alerta de presença confirmada
 confirmar.addEventListener("click", function() {
     //videoWidth e Heigth é do tamanho da resolução da câmera, o clientWidth e Height é do tamanho que eu defini
     canvas.width = video.clientWidth;
@@ -51,12 +51,5 @@ confirmar.addEventListener("click", function() {
         canvas.height
     ),
 
-    // Transforma a foto em uma imagem
     foto.src = canvas.toDataURL("image/png");
-
-    // Salva a foto no navegador
-    localStorage.setItem("fotoPresenca", foto.src);
-
-    // Vai para a página de confirmação
-    window.location.href = "presenca_confirmada.html";
 });
