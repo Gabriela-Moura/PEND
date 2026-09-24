@@ -1,183 +1,180 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-font-family: Arial, sans-serif;
-background: linear-gradient(135deg, #dff6e4, #a8e6cf);
-min-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dff6e4, #a8e6cf);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 main {
-background-color: white;
-width: 100%;
-max-width: 600px;
-padding: 35px;
-border-radius: 20px;
-text-align: center;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
-color: #2e7d32;
-font-size: 35px;
-margin-bottom: 15px;
+    color: #2e7d32;
+    font-size: 35px;
+    margin-bottom: 15px;
 }
 
 p {
-color: #444;
-font-size: 18px;
-margin: 12px 0;
+    color: #444;
+    font-size: 18px;
+    margin: 12px 0;
 }
 
 /* Imagem do cachorro */
 #cachorro {
-width: 100%;
-max-width: 400px;
-height: 280px;
-object-fit: cover;
-border-radius: 15px;
-margin: 20px auto;
-display: block;
-border: 4px solid #81c784;
+    width: 100%;
+    max-width: 400px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 20px auto;
+    display: block;
+    border: 4px solid #81c784;
 }
 
 /* Área dos botões */
 #opcoes {
-display: none;
+    display: none;
 }
 
 #resposta1,
 #resposta2,
 #resposta3,
 #resposta4 {
-width: 80%;
-max-width: 400px;
-padding: 14px;
-margin: 7px auto;
-border: none;
-border-radius: 10px;
-background-color: #808080;
-color: white;
-font-size: 17px;
-font-weight: bold;
-cursor: pointer;
-transition: 0.2s;
+    width: 80%;
+    max-width: 400px;
+    padding: 14px;
+    margin: 7px auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #808080;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 #resposta1:hover,
 #resposta2:hover,
 #resposta3:hover,
 #resposta4:hover {
-background-color: #666666;
-transform: scale(1.03);
+    background-color: #666666;
+    transform: scale(1.03);
 }
 
 
 /* Feedback */
 #feedback {
-min-height: 30px;
-margin: 15px 0;
-font-size: 18px;
-font-weight: bold;
+    min-height: 30px;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 #feedback p {
-color: #2e7d32;
-font-weight: bold;
+    color: #2e7d32;
+    font-weight: bold;
 }
 
 /* Resultado */
 #resultado {
-color: #333;
-font-weight: bold;
+    color: #333;
+    font-weight: bold;
 }
 
 /* Pontuação */
 #pontuacao {
-background-color: #e8f5e9;
-color: #2e7d32;
-padding: 12px;
-border-radius: 10px;
-font-size: 20px;
-font-weight: bold;
-margin-top: 20px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 /* Botão próximo */
 #proximo {
-margin-top: 15px;
-padding: 13px 25px;
-border: none;
-border-radius: 10px;
-background-color: #1565c0;
-color: white;
-font-size: 16px;
-font-weight: bold;
-cursor: pointer;
-transition: 0.2s;
+    margin-top: 15px;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1565c0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 #proximo:hover {
-background-color: #0d47a1;
-transform: scale(1.05);
+    background-color: #0d47a1;
+    transform: scale(1.05);
 }
 
 /* Botão começar */
 #iniciar {
-display: inline-block;
-margin-top: 25px;
-padding: 15px 30px;
-background-color: #4caf50;
-color: white;
-text-decoration: none;
-border-radius: 10px;
-font-size: 18px;
-font-weight: bold;
-transition: 0.2s;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 30px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.2s;
 }
 
 #iniciar:hover {
-background-color: #388e3c;
-transform: scale(1.05);
+    background-color: #388e3c;
+    transform: scale(1.05);
 }
 
 /* Responsividade para celular */
 @media (max-width: 600px) {
 
-```
-body {
-    padding: 10px;
-}
+    body {
+        padding: 10px;
+    }
 
-main {
-    padding: 25px 15px;
-}
+    main {
+        padding: 25px 15px;
+    }
 
-h1 {
-    font-size: 28px;
-}
+    h1 {
+        font-size: 28px;
+    }
 
-#cachorro {
-    height: 220px;
-}
+    #cachorro {
+        height: 220px;
+    }
 
-#resposta1,
-#resposta2,
-#resposta3,
-#resposta4 {
-    width: 100%;
-}
+    #resposta1,
+    #resposta2,
+    #resposta3,
+    #resposta4 {
+        width: 100%;
+    }
 
-#proximo {
-    width: 100%;
-}
-```
-
+    #proximo {
+        width: 100%;
+    }
 }
