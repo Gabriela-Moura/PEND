@@ -6,9 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colorê Papelaria</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="grid.css" rel="stylesheet" />
 </head>
 <style>
+    div {
+        border-radius: 10px;
+    }
+
+    header {
+        background-color: rgb(228, 250, 171);
+    }
+
+    body {
+        background-color: rgb(230, 177, 230);
+    }
+
+    h1,
+    p {
+        color: blueviolet;
+    }
+
     .formulario_contato {
         display: flex;
         justify-content: center;
@@ -26,6 +44,7 @@
 
     h2 {
         text-align: center;
+        color: blueviolet;
     }
 </style>
 
@@ -114,7 +133,7 @@
 
         <div class="row mb-3 text-center">
             <div class="col-4">
-                <div class="p-3 border bg-light">
+                <div class="p-3 border" style="background-color: rgb(228, 250, 171);">
                     <img src="foto2.png" class="d-block w-100" alt="Materiais escolares">
                     <p>Nome</p>
                     <p>Preco</p>
@@ -122,7 +141,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="p-3 border bg-light">
+                <div class="p-3 border" style="background-color: rgb(228, 250, 171);">
                     <img src="foto2.png" class="d-block w-100" alt="Materiais escolares">
                     <p>Nome</p>
                     <p>Preco</p>
@@ -130,7 +149,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="p-3 border bg-light">
+                <div class="p-3 border" style="background-color: rgb(228, 250, 171);">
                     <img src="foto2.png" class="d-block w-100" alt="Materiais escolares">
                     <p>Nome</p>
                     <p>Preco</p>
@@ -140,7 +159,7 @@
         </div>
         <div class="row mb-3 text-center">
             <div class="col-4">
-                <div class="p-3 border bg-light">
+                <div class="p-3 border" style="background-color: rgb(228, 250, 171);">
                     <img src="foto2.png" class="d-block w-100" alt="Materiais escolares">
                     <p>Nome</p>
                     <p>Preco</p>
@@ -148,7 +167,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="p-3 border bg-light">
+                <div class="p-3 border" style="background-color: rgb(228, 250, 171);">
                     <img src="foto2.png" class="d-block w-100" alt="Materiais escolares">
                     <p>Nome</p>
                     <p>Preco</p>
@@ -156,7 +175,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="p-3 border bg-light">
+                <div class="p-3 border" style="background-color: rgb(228, 250, 171);">
                     <img src="foto2.png" class="d-block w-100" alt="Materiais escolares">
                     <p>Nome</p>
                     <p>Preco</p>
@@ -202,8 +221,7 @@
                         </div>
                         <div>
                             <label for="mensagem" class="form-label">Mande uma mensagem:</label> </label>
-                            <input type="text" class="form-control" id="mensagem"
-                                placeholder="" value="" required />
+                            <input type="text" class="form-control" id="mensagem" placeholder="" value="" required />
                         </div>
                     </div>
                     <hr class="my-4" />
@@ -214,6 +232,29 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- Footer -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+        style="background-color: rgb(228, 250, 171);">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
+                <img src="colore.png" alt="Logo da Papelaria Colorê" width="100">
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2026 Papelaria Colorê</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex fs-4">
+            <li class="ms-3">
+                <a class="text-dark" href="#" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </li>
+            <li class="ms-3">
+                <a class="text-dark" href="#" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
 </body>
 
 </html>
